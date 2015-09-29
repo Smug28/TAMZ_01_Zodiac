@@ -1,6 +1,25 @@
 <resources>
     <string name="app_name">TAMZ_01_Zodiac</string>
-
     <string name="bday_enter">Enter your birthday</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_about">About</string>
+    <string name="about">&#169; 2015 Jiří Vaculík</string>
+    <string name="title_activity_sign">Sign Detail</string>
+
+    <string-array name="sign_desc">
+        <item>March 21 - April 19\nActive, Demanding, Determined, Effective, Ambitious</item>
+        <item>April 20 - May 20\nSecurity, Subtle strength, Appreciation, Instruction, Patience</item>
+        <item>May 21 - June 20\nCommunication, Indecision, Inquisitive, Intelligent, Changeable</item>
+        <item>June 21 - July 22\nEmotion, Diplomatic, Intensity, Impulsive, Selective</item>
+        <item>July 23 - August 22\nRuling, Warmth, Generosity, Faithful, Initiative</item>
+        <item>August 23 - September 22\nAnalyzing, Practical, Reflective, Observation, Thoughtful</item>
+        <item>September 23 - October 22\nBalance, Justice, Truth, Beauty, Perfection</item>
+        <item>October 23 - November 21\nTransient, Self-Willed, Purposeful, Unyielding</item>
+        <item>November 22 - December 21\nPhilosophical, Motion, Experimentation, Optimism</item>
+        <item>December 22 - January 19\nDetermination, Dominance, Perservering, Practical, Willful</item>
+        <item></item>
+        <item>January 20 - February 18\nKnowledge, Humanitarian, Serious, Insightful, Duplicitous</item>
+        <item>February 19 - March 20\nFluctuation, Depth, Imagination, Reactive, Indecisive</item>
+    </string-array>
 </resources>

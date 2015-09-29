@@ -9,13 +9,38 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/bday_enter"
             android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait">
+            android:label="@string/bday_enter"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.vacul.tamz_01_zodiac.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.vacul.tamz_01_zodiac.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SignActivity"
+            android:label="@string/title_activity_sign"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.vacul.tamz_01_zodiac.MainActivity" />
         </activity>
     </application>
 

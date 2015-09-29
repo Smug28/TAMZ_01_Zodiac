@@ -36,6 +36,18 @@ public enum ZodiacSigns {
         return !(d.before(startDate) || d.after(endDate));
     }
 
+    public static int getSign(Date bday){
+        ZodiacSigns[] values = ZodiacSigns.values();
+        for (int i = 0; i < values.length; i++){
+            values[i].startDate.setYear(bday.getYear());
+            values[i].endDate.setYear(bday.getYear());
+            if (values[i].isSign(bday)) {
+                return values[i].equals(Capricorn2) ? i - 1 : i;
+            }
+        }
+        return 0;
+    }
+
     public static void setSign(Date bday, TextView tv, ImageView iv){
         for (ZodiacSigns zs : ZodiacSigns.values()){
             zs.startDate.setYear(bday.getYear());
