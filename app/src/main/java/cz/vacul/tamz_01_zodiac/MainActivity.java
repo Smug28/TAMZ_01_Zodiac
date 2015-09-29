@@ -3,11 +3,13 @@ package cz.vacul.tamz_01_zodiac;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.ImageView;
@@ -47,6 +49,21 @@ public class MainActivity extends Activity {
                 Intent i = new Intent(getApplicationContext(), SignActivity.class);
                 i.putExtra("sign", ZodiacSigns.getSign(new Date(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth())));
                 startActivity(i);
+            }
+        });
+        imageView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                switch(motionEvent.getAction()){
+                    case MotionEvent.ACTION_DOWN:
+                        imageView.setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        imageView.getDrawable().clearColorFilter();
+                        imageView.invalidate();
+                        break;
+                }
+                return false;
             }
         });
     }
